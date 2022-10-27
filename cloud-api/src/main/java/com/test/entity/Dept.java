@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
 //@AllArgsConstructor
 @Data
 @Accessors(chain=true)
-public class Dept implements Serializable// entity --orm--- db_table
+public class Dept implements Serializable// entity --orm--- db_table 测试
 {
     private Long 	deptno; // 主键
     private String 	dname; // 部门名称
