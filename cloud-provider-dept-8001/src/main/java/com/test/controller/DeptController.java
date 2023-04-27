@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 public class DeptController {
+    //为了测试随便加的注释
     @Autowired
     DeptService deptService;
 
@@ -17,14 +18,13 @@ public class DeptController {
         return deptService.add(dept);
     }
 
-    @RequestMapping(value = "/dept/get/{ID}",method= RequestMethod.GET)
-    public Dept get(@PathVariable("id") Long id) {
+    @RequestMapping("/dept/get")
+    public Dept get(Long id) {
         return deptService.get(id);
     }
 
-    @RequestMapping(value = "/dept/list",method= RequestMethod.GET)
-    public List<Dept> list(Dept dept) {
-        System.out.println(dept);
+    @RequestMapping("/dept/list")
+    public List<Dept> list() {
         return deptService.list();
     }
 
